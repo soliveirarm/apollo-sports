@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -13,6 +13,20 @@
       <ion-title size="large">{{ folder }}</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <swiper-container
+    slidechange="swiperSlideChanged($event)"
+    loop="true"
+    navigation="true"
+    autoplay="true"
+  >
+    <swiper-slide *ngFor="let product of products">
+      <div class="swiper-zoom-container ion-padding">
+        <img [src]="product.img" alt="" />
+        <p class="muted">{{product.title}}</p>
+      </div>
+    </swiper-slide>
+  </swiper-container>
 
   <div id="container">
     <strong class="capitalize">{{ folder }}</strong>

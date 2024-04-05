@@ -8,13 +8,11 @@ import { FolderPageRoutingModule } from './folder-routing.module';
 
 import { FolderPage } from './folder.page';
 
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    FolderPageRoutingModule
-  ],
-  declarations: [FolderPage]
+  imports: [CommonModule, FormsModule, IonicModule, FolderPageRoutingModule],
+  declarations: [FolderPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class FolderPageModule {}
